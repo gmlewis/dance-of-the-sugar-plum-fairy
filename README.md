@@ -14,7 +14,7 @@ I used the following tools:
 # Background
 
 I started this project while watching Polyfjord's excellent Audio Visualizer
-Master Class: https://www.youtube.com/watch?v=amJKrcopZ8A
+Masterclass: https://www.youtube.com/watch?v=amJKrcopZ8A
 
 As I was working on it, I realized that instead of using Wavefront OBJ
 files as an intermediary, I could have Copilot help me write Python script
