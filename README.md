@@ -3,7 +3,7 @@
 This is my first fully open-source animation project.
 
 The full animation can be viewed on YouTube:
-
+https://youtu.be/1OpsGUUw-Xc
 
 I used the following tools:
 
