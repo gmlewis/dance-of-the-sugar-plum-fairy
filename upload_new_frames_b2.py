@@ -68,12 +68,18 @@ def apply_env(env: Dict[str, str], required: Iterable[str]) -> Dict[str, str]:
 
 def read_listing(path: Path) -> Set[str]:
     if not path.exists():
-        return set()
+        raise FileNotFoundError(
+            f"Listing file not found: {path}. Run find_frames_b2.py to generate it."
+        )
     names: Set[str] = set()
     for line in path.read_text(encoding="utf-8", errors="ignore").splitlines()[1:]:
         parts = line.split("\t")
         if parts:
             names.add(parts[0])
+    if not names:
+        raise ValueError(
+            f"Listing file {path} is empty. Regenerate with find_frames_b2.py before uploading."
+        )
     return names
 
 
