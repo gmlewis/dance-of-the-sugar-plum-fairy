@@ -1,7 +1,11 @@
+/JohnPNG
 /RenderEXR
 /.bitwig-project
 /auto-backups
+.env*
 *.blend*
-*.mkv
 *.mid
+*.mkv
+*.mp4
 *.obj
+*.png
