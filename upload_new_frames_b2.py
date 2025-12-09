@@ -161,6 +161,15 @@ def main():
         sys.stderr.write(f"Upload error: {exc}\n")
         sys.exit(1)
 
+    obsolete_path = LISTING_FILE.with_name(LISTING_FILE.stem + ".obsolete.tsv")
+    try:
+        LISTING_FILE.rename(obsolete_path)
+        print(f"Renamed listing to: {obsolete_path}")
+    except Exception as exc:
+        print(f"Upload complete, but failed to rename listing: {exc}")
+        print(f"Please manually rename {LISTING_FILE} to avoid reuploads.")
+        return
+
     print("Upload complete.")
 
 
